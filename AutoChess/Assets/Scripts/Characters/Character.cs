@@ -7,7 +7,7 @@ public class Character
 {
     List<Ability> abilities = new List<Ability>();
     
-    public void AddAbilty (List<Ability> newAbilities) {
+    public void AddAbility(List<Ability> newAbilities) {
         abilities.AddRange(newAbilities);
     }
 
