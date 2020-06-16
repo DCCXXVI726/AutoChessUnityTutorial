@@ -28440,7 +28440,6 @@ GameObject:
   - component: {fileID: 529334222}
   - component: {fileID: 529334221}
   - component: {fileID: 529334220}
-  - component: {fileID: 529334225}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -28448,28 +28447,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!195 &529334220
-NavMeshAgent:
+--- !u!114 &529334220
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529334219}
   m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0.5
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c792c158b0a76e24ca32bb13b97dccbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  way: {fileID: 294580037}
 --- !u!65 &529334221
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28544,22 +28534,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &529334225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 529334219}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8206c8351ba00b44bfddbc2fc63793d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: 529334220}
-  unit: {fileID: 11400000, guid: 14676cc375320c946ae3b1d32ec3eccc, type: 2}
-  target: {fileID: 0}
-  way: {fileID: 294580037}
 --- !u!1 &538037900
 GameObject:
   m_ObjectHideFlags: 0

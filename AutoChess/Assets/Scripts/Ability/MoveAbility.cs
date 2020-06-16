@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovementAbility : Ability
+public class MoveAbility : Ability
 {
-    Vector3 pos;
+    public float speed = 3.0f;
 }

@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class Command
 {
-    public static void Execute() {
+    public void Execute() {
     }
 }
