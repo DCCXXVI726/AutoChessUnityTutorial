@@ -5,16 +5,15 @@ using UnityEngine;
 public class MoveCommand : Command
 {
     Character character;
-    Vector3 pos;
+    Transform obj;
     Vector3 target;
 
-    public MoveCommand(Character character, ref Vector3 pos, Vector3 target)
+    public MoveCommand(Character character, Transform obj, Vector3 target)
     {
-        this.pos = pos;
+        this.obj = obj;
         this.target = target;
         this.character = character;
         this.Execute();
-        pos = this.pos;
     }
 
     void Execute()
@@ -27,7 +26,7 @@ public class MoveCommand : Command
         {
             return ;
         }
-        dir = Vector3.Normalize(target - pos);
-        pos = pos + dir * moveAbility.speed * Time.deltaTime;
+        dir = Vector3.Normalize(target - obj.position);
+        obj.Translate(dir * moveAbility.speed * Time.deltaTime);
     }
 }
