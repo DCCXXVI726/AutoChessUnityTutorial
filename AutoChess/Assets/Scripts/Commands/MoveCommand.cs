@@ -16,7 +16,7 @@ public class MoveCommand : Command
         this.Execute();
     }
 
-    void Execute()
+    public void Execute()
     {
         Vector3 dir;
 
@@ -24,6 +24,7 @@ public class MoveCommand : Command
 
         if (moveAbility == null)
         {
+            Debug.Log("Don't have MoveAbility");
             return ;
         }
         dir = Vector3.Normalize(target - obj.position);

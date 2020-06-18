@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Command
+public interface Command
 {
-    public void Execute() {
-    }
+    void Execute();
 }

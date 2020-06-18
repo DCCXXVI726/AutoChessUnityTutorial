@@ -9,4 +9,11 @@ public class CharactersFactory {
         newCharacter.AddAbility(abilities);
         return newCharacter;
     }
+
+    public static Character CreateSpawner() {
+        Character newCharacter = new Character();
+        List<Ability> abilities = new List<Ability>() {new SpawnAbility()};
+        newCharacter.AddAbility(abilities);
+        return newCharacter;
+    }
 }
