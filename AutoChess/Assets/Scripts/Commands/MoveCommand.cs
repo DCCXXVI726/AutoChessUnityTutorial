@@ -5,12 +5,10 @@ using UnityEngine;
 public class MoveCommand : Command
 {
     Character character;
-    Transform obj;
     Vector3 target;
 
-    public MoveCommand(Character character, Transform obj, Vector3 target)
+    public MoveCommand(Character character, Vector3 target)
     {
-        this.obj = obj;
         this.target = target;
         this.character = character;
         this.Execute();
@@ -27,7 +25,7 @@ public class MoveCommand : Command
             Debug.Log("Don't have MoveAbility");
             return ;
         }
-        dir = Vector3.Normalize(target - obj.position);
-        obj.Translate(dir * moveAbility.speed * Time.deltaTime);
+        dir = Vector3.Normalize(target - moveAbility.transform.position);
+        moveAbility.transform.Translate(dir * moveAbility.speed * Time.deltaTime);
     }
 }

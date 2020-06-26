@@ -11,7 +11,7 @@ public class BasicAI : MonoBehaviour
     
     void Start()
     {
-        character = CharactersFactory.CreateCaravan();
+        character = CharactersFactory.CreateCaravan(transform);
         wayPoints = way.GetComponentsInChildren<Transform>();
         wayCounter = 1;
         if (wayPoints.Length < 2)
@@ -34,6 +34,6 @@ public class BasicAI : MonoBehaviour
                 return ;
             }
          }
-         new MoveCommand(character, transform, wayPoints[wayCounter].position);
+         new MoveCommand(character, wayPoints[wayCounter].position);
     }
 }

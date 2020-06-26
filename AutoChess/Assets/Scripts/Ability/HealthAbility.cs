@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class HealthAbility : Ability 
 {
-    float health = 100;
-    float maxHealth = 100;
+    public float health = 100;
+    public float maxHealth = 100;
 }
