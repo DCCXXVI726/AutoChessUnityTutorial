@@ -16,4 +16,8 @@ public class CharactersFactory {
         newCharacter.AddAbility(abilities);
         return newCharacter;
     }
+
+    public static Character CreateWarrior() {
+        
+    }
 }
